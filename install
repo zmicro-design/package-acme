@@ -1,0 +1,22 @@
+#!/bin/bash
+
+help() {
+  echo "Usage:"
+  echo "  zpackage install acme"
+  echo ""
+}
+
+core() {
+  if [ "$1" = "-h" ] || [ "$1" = "--help" ]; then
+    help
+    exit 0
+  fi
+  
+  curl  https://get.acme.sh | sh -s
+}
+
+run() {
+  core $@
+}
+
+run $@

@@ -1,0 +1,3 @@
+export PACKAGE_ACME_VERSION=v3.0.2
+export PACKAGE_ACME_DIR=$HOME/.acme.sh
+export PACKAGE_ACME_ENV=$HOME/.acme.sh/.acme.env

@@ -12,7 +12,11 @@ core() {
     exit 0
   fi
   
-  curl  https://get.acme.sh | sh -s email=$ACME_EMAIL
+  if [ -n "$ACME_EMAIL" ]; then
+    curl  https://get.acme.sh | sh -s email=$ACME_EMAIL
+  else
+    curl  https://get.acme.sh | sh -s
+  fi
 }
 
 run() {
